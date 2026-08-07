@@ -1,21 +1,3 @@
-import { Anton, Space_Mono, Inter } from "next/font/google";
-
-const anton = Anton({
-  weight: "400",
-  subsets: ["latin"],
-  variable: "--font-anton",
-});
-const spaceMono = Space_Mono({
-  weight: ["400", "700"],
-  subsets: ["latin"],
-  variable: "--font-mono",
-});
-const inter = Inter({
-  weight: ["400", "500", "600", "700"],
-  subsets: ["latin"],
-  variable: "--font-inter",
-});
-
 const tickets = [
   {
     num: "TABLE 04",
@@ -137,7 +119,7 @@ export default function Home() {
   const rail = [...tickets, ...tickets];
 
   return (
-    <div className={`${anton.variable} ${spaceMono.variable} ${inter.variable} page`}>
+    <div className="page">
       <header>
         <div className="nav-inner">
           <div className="logo">
@@ -154,8 +136,8 @@ export default function Home() {
             <a href="#">Pricing</a>
           </nav>
           <div className="nav-cta">
-            <a href="#" className="btn btn-ghost">Sign in</a>
-            <a href="#" className="btn btn-primary">Start free</a>
+            <a href="/login" className="btn btn-ghost">Sign in</a>
+            <a href="/register" className="btn btn-primary">Start free</a>
           </div>
         </div>
       </header>
@@ -171,7 +153,7 @@ export default function Home() {
             off the same ticket, so nothing gets lost between the floor and the kitchen.
           </p>
           <div className="hero-cta">
-            <a href="#" className="btn btn-primary btn-lg">Start free</a>
+            <a href="/register" className="btn btn-primary btn-lg">Start free</a>
             <a href="#features" className="btn btn-ghost btn-lg">See how it runs</a>
           </div>
           <div className="hero-meta mono">NO CARD REQUIRED · LIVE IN ONE SHIFT</div>
@@ -328,7 +310,7 @@ export default function Home() {
             before the next shift.
           </p>
           <div className="cta-btns">
-            <a href="#" className="btn btn-primary btn-lg">Create your restaurant</a>
+            <a href="/register" className="btn btn-primary btn-lg">Create your restaurant</a>
             <a href="#" className="btn btn-ghost btn-lg">Talk to us</a>
           </div>
         </div>
